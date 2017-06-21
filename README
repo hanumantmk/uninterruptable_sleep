@@ -1,0 +1,14 @@
+Basic idea is:
+
+make all
+make install
+make mknod
+
+that installs a character device to /dev/memory which you can hang processes with
+
+$ cat /dev/memory
+# now you're hung
+
+$ echo "x" > /dev/memory
+$ echo "x" > /dev/memory
+# now you're popped out
